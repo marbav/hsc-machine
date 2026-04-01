@@ -9,7 +9,7 @@ import { playSelect, playDeselect, playGenerate, playPrint } from "@/lib/sounds"
 import {
   Clock, FileText, Loader2, Printer, Download, Check, X, ChevronDown, Sparkles, Zap,
 } from "lucide-react";
-import AdBanner from "@/components/AdBanner";
+
 import type { Question } from "@shared/schema";
 
 const EXAM_OPTIONS = [
@@ -439,19 +439,8 @@ export default function MockExamPage() {
   };
 
   return (
-    <div className="flex gap-6">
-      {/* Left side ad */}
-      <div className="hidden xl:block shrink-0 w-[160px]">
-        <div className="sticky top-20">
-          <AdBanner size="rectangle" />
-        </div>
-      </div>
-
-    <div className="flex-1 min-w-0 space-y-6">
+    <div className="space-y-6">
       <ParticleBurst {...particles} />
-
-      {/* Ad at top of mock exam page */}
-      <AdBanner size="leaderboard" />
 
       <div>
         <h1 className="text-xl font-semibold tracking-tight flex items-center gap-2">
@@ -645,14 +634,6 @@ export default function MockExamPage() {
           </CardContent>
         </Card>
       )}
-    </div>
-
-      {/* Right side ad */}
-      <div className="hidden xl:block shrink-0 w-[160px]">
-        <div className="sticky top-20">
-          <AdBanner size="rectangle" />
-        </div>
-      </div>
     </div>
   );
 }

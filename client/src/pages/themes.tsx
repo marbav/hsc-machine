@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Lock, Check, Palette, Sparkles, Zap, Award } from "lucide-react";
-import AdBanner from "@/components/AdBanner";
+
 
 type Tab = "themes" | "animations" | "titles";
 
@@ -17,15 +17,7 @@ export default function StorePage() {
   } = useGame();
 
   return (
-    <div className="flex gap-6">
-      {/* Left side ad */}
-      <div className="hidden xl:block shrink-0 w-[160px]">
-        <div className="sticky top-20">
-          <AdBanner size="rectangle" />
-        </div>
-      </div>
-
-    <div className="flex-1 min-w-0 space-y-6">
+    <div className="space-y-6">
       <div>
         <h1 className="text-xl font-semibold tracking-tight flex items-center gap-2">
           <Sparkles className="w-5 h-5 text-primary" />
@@ -35,9 +27,6 @@ export default function StorePage() {
           Unlock themes and animations by leveling up. You're level {level}.
         </p>
       </div>
-
-      {/* Ad at top of store */}
-      <AdBanner size="leaderboard" />
 
       {/* Tabs */}
       <div className="flex gap-1 bg-muted rounded-lg p-1">
@@ -238,14 +227,6 @@ export default function StorePage() {
           })}
         </div>
       )}
-    </div>
-
-      {/* Right side ad */}
-      <div className="hidden xl:block shrink-0 w-[160px]">
-        <div className="sticky top-20">
-          <AdBanner size="rectangle" />
-        </div>
-      </div>
     </div>
   );
 }
