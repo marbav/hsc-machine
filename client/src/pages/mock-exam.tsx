@@ -439,7 +439,15 @@ export default function MockExamPage() {
   };
 
   return (
-    <div className="space-y-6">
+    <div className="flex gap-6">
+      {/* Left side ad */}
+      <div className="hidden xl:block shrink-0 w-[160px]">
+        <div className="sticky top-20">
+          <AdBanner size="rectangle" />
+        </div>
+      </div>
+
+    <div className="flex-1 min-w-0 space-y-6">
       <ParticleBurst {...particles} />
 
       {/* Ad at top of mock exam page */}
@@ -637,6 +645,14 @@ export default function MockExamPage() {
           </CardContent>
         </Card>
       )}
+    </div>
+
+      {/* Right side ad */}
+      <div className="hidden xl:block shrink-0 w-[160px]">
+        <div className="sticky top-20">
+          <AdBanner size="rectangle" />
+        </div>
+      </div>
     </div>
   );
 }

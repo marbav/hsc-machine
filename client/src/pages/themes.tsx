@@ -17,7 +17,15 @@ export default function StorePage() {
   } = useGame();
 
   return (
-    <div className="space-y-6">
+    <div className="flex gap-6">
+      {/* Left side ad */}
+      <div className="hidden xl:block shrink-0 w-[160px]">
+        <div className="sticky top-20">
+          <AdBanner size="rectangle" />
+        </div>
+      </div>
+
+    <div className="flex-1 min-w-0 space-y-6">
       <div>
         <h1 className="text-xl font-semibold tracking-tight flex items-center gap-2">
           <Sparkles className="w-5 h-5 text-primary" />
@@ -230,6 +238,14 @@ export default function StorePage() {
           })}
         </div>
       )}
+    </div>
+
+      {/* Right side ad */}
+      <div className="hidden xl:block shrink-0 w-[160px]">
+        <div className="sticky top-20">
+          <AdBanner size="rectangle" />
+        </div>
+      </div>
     </div>
   );
 }
