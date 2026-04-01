@@ -9,6 +9,7 @@ import { playSelect, playDeselect, playGenerate, playPrint } from "@/lib/sounds"
 import {
   Clock, FileText, Loader2, Printer, Download, Check, X, ChevronDown, Sparkles, Zap,
 } from "lucide-react";
+import AdBanner from "@/components/AdBanner";
 import type { Question } from "@shared/schema";
 
 const EXAM_OPTIONS = [
@@ -440,6 +441,9 @@ export default function MockExamPage() {
   return (
     <div className="space-y-6">
       <ParticleBurst {...particles} />
+
+      {/* Ad at top of mock exam page */}
+      <AdBanner size="leaderboard" />
 
       <div>
         <h1 className="text-xl font-semibold tracking-tight flex items-center gap-2">

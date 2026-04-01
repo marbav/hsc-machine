@@ -31,6 +31,7 @@ import {
   HelpCircle,
 } from "lucide-react";
 import { Link } from "wouter";
+import AdBanner from "@/components/AdBanner";
 import { useToast } from "@/hooks/use-toast";
 import { useKeyboardShortcuts } from "@/hooks/use-keyboard-shortcuts";
 import { getDailyQuote } from "@/lib/quotes";
@@ -942,6 +943,9 @@ export default function PracticePage() {
           <p className="text-[11px] text-muted-foreground text-center leading-relaxed px-4 py-2">
             Some questions reference diagrams from the original NESA paper. Use the link provided to view the real diagram.
           </p>
+
+          {/* Ad at bottom of practice page */}
+          <AdBanner size="leaderboard" className="mt-2" />
         </div>
       ) : (
         <Card className="border border-border">

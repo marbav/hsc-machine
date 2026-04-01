@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Lock, Check, Palette, Sparkles, Zap, Award } from "lucide-react";
+import AdBanner from "@/components/AdBanner";
 
 type Tab = "themes" | "animations" | "titles";
 
@@ -26,6 +27,9 @@ export default function StorePage() {
           Unlock themes and animations by leveling up. You're level {level}.
         </p>
       </div>
+
+      {/* Ad at top of store */}
+      <AdBanner size="leaderboard" />
 
       {/* Tabs */}
       <div className="flex gap-1 bg-muted rounded-lg p-1">

@@ -26,6 +26,7 @@ import {
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { Link } from "wouter";
+import AdBanner from "@/components/AdBanner";
 import type { Question, Response as UserResponse } from "@shared/schema";
 
 interface FlaggedItem extends UserResponse {
@@ -377,6 +378,9 @@ export default function FlaggedPage() {
 
   return (
     <div className="space-y-5">
+      {/* Ad at top of review page */}
+      <AdBanner size="leaderboard" />
+
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-xl font-semibold tracking-tight flex items-center gap-2">

@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { useGame } from "@/lib/gameState";
 import { Link } from "wouter";
+import AdBanner from "@/components/AdBanner";
 import {
   BarChart3,
   BookOpen,
@@ -182,6 +183,9 @@ export default function AnalyticsPage() {
         </div>
       </Link>
 
+      {/* Ad at top */}
+      <AdBanner size="leaderboard" />
+
       {/* Summary cards */}
       <div className="grid grid-cols-2 sm:grid-cols-5 gap-3">
         <SummaryCard
@@ -349,6 +353,9 @@ export default function AnalyticsPage() {
           </CardContent>
         </Card>
       </div>
+
+      {/* Ad between charts and analysis */}
+      <AdBanner size="leaderboard" />
 
       {/* Subject Performance Analysis */}
       <Card className="border border-border shadow-sm">
