@@ -26,6 +26,15 @@ export async function registerRoutes(
     console.log(`Seeded ${seedQuestions.length} questions.`);
   }
 
+  // Serve ads.txt for AdSense verification
+  app.get("/ads.txt", (_req, res) => {
+    const adsPath = path.resolve(__dirname, "public", "ads.txt");
+    const altPath = path.resolve(process.cwd(), "dist", "public", "ads.txt");
+    if (fs.existsSync(adsPath)) return res.type("text/plain").sendFile(adsPath);
+    if (fs.existsSync(altPath)) return res.type("text/plain").sendFile(altPath);
+    res.status(404).send("Not found");
+  });
+
   // Serve diagram images
   app.get("/api/diagrams/:filename", (req, res) => {
     const filename = req.params.filename;
