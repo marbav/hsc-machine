@@ -1,7 +1,7 @@
 import { QueryClient, QueryFunction } from "@tanstack/react-query";
 
-// Use relative path for deployed proxy compatibility
-const API_BASE = ".";
+// Empty string = same origin (works on Render, local dev, etc.)
+const API_BASE = "";
 
 async function throwIfResNotOk(res: Response) {
   if (!res.ok) {
